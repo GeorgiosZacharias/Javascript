@@ -3,5 +3,7 @@ let radius;
 let circumference;
 
 document.getElementById("mySumbit").onclick = function () {
-    document.getElementById(myText).ariaValueMax;
+    radius = document.getElementById(myText).ariaValueMax;//value from input
+    radius = Number(radius);//convert to number
+    circumference = 2 * PI * radius;
 }
