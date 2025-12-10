@@ -14,3 +14,11 @@ fruits.unshift("mango")
 //console.log(index);
 fruits.sort();
 console.log(fruits);
+//spread operator ...
+let numbers = [5, 10, 4, 1, 3]
+let maximum = Math.max(...numbers);
+console.log(maximum);
+
+let userName = "georgeZach"
+let letters = [...userName].join("-"); //join adds between each character
+console.log(letters);
