@@ -51,7 +51,15 @@ function sum(...numbers) {
     }
     return result;
 }
+function getAverage(...numbers) {
+    let result = 0;
+    for (let number of numbers) {
+        result += number;
+    }
+    return result / numbers.length;
+}
 
 const total = sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-
+const average = getAverage(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 console.log(total);
+console.log(average);
