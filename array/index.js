@@ -26,3 +26,14 @@ console.log(letters);
 let vegetables = ["carrots", "celery"];
 let foods = [...fruits, ...vegetables].join(" ");
 console.log(foods);
+
+//rest operator
+function openFridge(...foods) {
+    console.log(foods);
+
+}
+const food1 = "pizza";
+const food2 = "burger";
+const food3 = "sushi";
+
+openFridge(food1, food2, food3);
