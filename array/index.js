@@ -7,8 +7,8 @@ fruits.unshift("mango")
 
 //let numOfFruits = fruits.length;
 //console.log(numOfFruits);
-for (let i = 0; i < fruits.length; i++) {
-    console.log(fruits[i]);
+for (let fruit of fruits) {
+    console.log(fruit);
 }
 //let index = fruits.indexOf("banana");
 //console.log(index);
