@@ -63,3 +63,10 @@ const total = sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 const average = getAverage(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 console.log(total);
 console.log(average);
+
+function combineString(...strings) {
+    return strings.join(" ");
+}
+const fullName = combineString("Mr.", "George", "Zacharias");
+
+console.log(fullName);
