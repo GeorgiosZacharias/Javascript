@@ -29,7 +29,11 @@ console.log(foods);
 
 //rest operator
 function openFridge(...foods) {
-    console.log(foods);
+    console.log(...foods);
+
+}
+function getFood(...foods) {
+    return foods;
 
 }
 const food1 = "pizza";
@@ -37,3 +41,5 @@ const food2 = "burger";
 const food3 = "sushi";
 
 openFridge(food1, food2, food3);
+const foodss = getFood(food1, food2, food3);
+console.log(foodss);
