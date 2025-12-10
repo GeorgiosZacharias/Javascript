@@ -14,3 +14,36 @@ form {
     padding: 25px;
     border-radius: 20px;
 }
+
+#textBox {
+    width: 50px;
+    text-align: center;
+    border: 1px solid;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 15px;
+    background-color: hsl(0, 59%, 47%);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 42%, 44%);
+    ;
+}
+
+#result {
+    font-size: 1.75em;
+    font-weight: bold;
+}
