@@ -43,3 +43,15 @@ const food3 = "sushi";
 openFridge(food1, food2, food3);
 const foodss = getFood(food1, food2, food3);
 console.log(foodss);
+
+function sum(...numbers) {
+    let result = 0;
+    for (let number of numbers) {
+        result += number;
+    }
+    return result;
+}
+
+const total = sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+console.log(total);
