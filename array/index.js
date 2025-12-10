@@ -22,3 +22,7 @@ console.log(maximum);
 let userName = "georgeZach"
 let letters = [...userName].join("-"); //join adds between each character
 console.log(letters);
+
+let vegetables = ["carrots", "celery"];
+let foods = [...fruits, ...vegetables].join(" ");
+console.log(foods);
