@@ -10,6 +10,8 @@ function rollDice() {
         const value = Math.floor(Math.random() * 6) + 1;
         console.log(value);
         values.push(value);
-        console.log(values);
+        img.push(`<img src="dice_images/${value}.png">`);
     }
+    diceResult.textContent = `dice: ${values.join(', ')}`;
+
 }
