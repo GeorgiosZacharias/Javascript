@@ -1,8 +1,9 @@
-function hello(callback) {
-    console.log("Hello");
-    callback();
+function sum(callback, x, y) {
+    let result = x + y;
+    callback(result);
 }
-function goodbye() {
-    console.log("goodbye");
+function displayConsole(result) {
+    console.log(result);
 }
-hello(goodbye);
+
+sum(displayConsole, 10, 25);
