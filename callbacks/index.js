@@ -5,5 +5,8 @@ function sum(callback, x, y) {
 function displayConsole(result) {
     console.log(result);
 }
+function displayPage(result) {
+    document.getElementById("myH1").textContent = result;
+}
 
-sum(displayConsole, 10, 25);
+sum(displayPage, 10, 25);
