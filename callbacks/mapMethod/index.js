@@ -25,3 +25,12 @@ function upperCase(element) {
 function capitalizeFirst(element) {
     return element.charAt(0).toUpperCase() + element.slice(1);
 }
+
+const dates = ["2025-01-10", "2025-03-20"];
+const formattedDates = dates.map(formatDates);
+console.log(formattedDates);
+
+function formatDates(element) {
+    const parts = element.split("-");
+    return `${parts[1]}/${parts[2]}/${parts[0]}`;
+}
