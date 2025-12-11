@@ -34,3 +34,27 @@ function formatDates(element) {
     const parts = element.split("-");
     return `${parts[1]}/${parts[2]}/${parts[0]}`;
 }
+
+
+//filter
+let numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let evenNums = numbers2.filter(isEven);
+let oddNums = numbers2.filter(isOdd);
+console.log(evenNums);
+console.log(oddNums);
+
+function isEven(element) {
+    return element % 2 === 0;
+}
+
+function isOdd(element) {
+    return element % 2 !== 0;
+}
+
+const ages = [16, 17, 18, 18, 19, 20, 60];
+const adults = ages.filter(isAdult);
+console.log(adults);
+
+function isAdult(element) {
+    return element >= 18;
+}
