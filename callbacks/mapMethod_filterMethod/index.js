@@ -58,3 +58,10 @@ console.log(adults);
 function isAdult(element) {
     return element >= 18;
 }
+
+const prices = [5, 10, 15, 35, 5, 3];
+const total = prices.reduce(sum);
+console.log(`$${total.toFixed(2)}`);
+function sum(accumulator, element) { //previous element with next one 0 +5 , 5+15
+    return accumulator + element;
+}
