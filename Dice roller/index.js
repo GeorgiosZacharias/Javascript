@@ -6,4 +6,10 @@ function rollDice() {
     const diceImages = document.getElementById("diceImages");
     const values = [];
     const img = [];
+    for (let i = 0; i < numberOfDice; i++) {
+        const value = Math.floor(Math.random() * 6) + 1;
+        console.log(value);
+        values.push(value);
+        console.log(values);
+    }
 }
