@@ -17,3 +17,20 @@ product1.displayProduct();
 product2.displayProduct();
 const total = product1.calculateTotal(salesTax) + product2.calculateTotal(salesTax);
 console.log(`total price (tax included):$${total.toFixed(2)}`);
+
+class MathUtil {
+    static PI = 3.14159; //belongs to the class not to the objects
+
+    static getDiameter(radius) {
+        return radius * 2;
+    }
+    static getcircumference(radius) {
+        return 2 * this.PI * radius;
+    }
+}
+
+console.log(MathUtil.PI);
+
+console.log(MathUtil.getDiameter(10));
+
+console.log(MathUtil.getcircumference(10));
