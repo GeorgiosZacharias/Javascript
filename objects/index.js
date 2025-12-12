@@ -27,6 +27,6 @@ person2.sayHello();
 const person3 = {
     name: "takis tsan",
     favFood: "burger",
-    sayHello: function () { console.log(`Hi i am ${this.name}`) },
+    sayHello: function () { console.log(`Hi i am ${this.name} and my favorite food is ${this.favFood}`) },
 }
 person3.sayHello();
