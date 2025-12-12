@@ -22,3 +22,11 @@ person1.sayHello();
 
 person2.sayHello();
 
+//this reference to the object where THIS is used.
+
+const person3 = {
+    name: "takis tsan",
+    favFood: "burger",
+    sayHello: function () { console.log(`Hi i am ${this.name}`) },
+}
+person3.sayHello();
