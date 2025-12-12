@@ -11,3 +11,7 @@ const helloFunction = function () {
 }
 
 helloFunction();
+
+setTimeout(function () {
+    console.log("Hello")
+}, 3000)
