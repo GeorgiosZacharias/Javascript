@@ -1,11 +1,24 @@
 //object = a collection of related properties and/or methods.
 
-const person = {
+const person1 = {
     firstName: "justin",
     lastName: "Bieber",
     age: 30,
     isEmployed: false,
+    sayHello: function () { console.log("Hi i am an unemployed singer") },
+}
+const person2 = {
+    firstName: "justin",
+    lastName: "Tsan",
+    age: 20,
+    isEmployed: true,
+    sayHello: () => console.log("Hi i am an employed singer"),
 }
 
-console.log(person);
-console.log(person.age);
+console.log(person1);
+console.log(person1.age);
+console.log(person2.age);
+person1.sayHello();
+
+person2.sayHello();
+
