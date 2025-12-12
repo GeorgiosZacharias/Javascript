@@ -6,6 +6,11 @@ function hello() {
 
 //function expressions = a way to define functions as values or variables
 
+//used in callbacks in asychronous operations
+//higher order functions
+//closures
+//event listeners
+
 const helloFunction = function () {
     console.log("Hello")
 }
