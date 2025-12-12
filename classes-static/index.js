@@ -41,10 +41,16 @@ class User {
         this.username = username;
         User.userCount++;
     }
+    static getUserCount() {
+        console.log(`There are ${User.userCount} users online`);
+    }
+    sayHello() {
+        console.log(`My username is ${this.username}`);
+    }
 
 }
 const user1 = new User("George");
 const user2 = new User("Justin");
-console.log(user1.username);
-console.log(user2.username);
-console.log(User.userCount);
+user1.sayHello();
+user2.sayHello();
+User.getUserCount();
