@@ -6,6 +6,7 @@ function Car(make, model, year, color) {
         this.model = model,
         this.year = year,
         this.color = color
+    this.drive = function () { console.log(`you drive the ${this.model} colored ${this.color}`) }
 }
 const car1 = new Car("Ford", "Mustang", 2025, "red");
 const car2 = new Car("Ford", "Mustang", 2023, "blue");
@@ -13,3 +14,5 @@ console.log(car1);
 console.log(car1.color);
 console.log(car2);
 console.log(car2.color);
+car1.drive();
+car2.drive();
