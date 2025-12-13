@@ -23,10 +23,12 @@ class Fish extends Animal {
 
 const rabbit = new Rabbit();
 const fish = new Fish();
+
 console.log(rabbit.alive);
 rabbit.alive = false;
 console.log(rabbit);
 rabbit.run();
+
 fish.alive = false;
 console.log(fish);
 
