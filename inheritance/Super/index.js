@@ -2,6 +2,10 @@ class Animal {
     constructor(name, age,) {
         this.name = name;
         this.age = age;
+
+    }
+    move(speed) {
+        console.log(`${this.name} moves at speed of ${this.speed}`);
     }
 }
 
@@ -10,11 +14,17 @@ class Rabbit extends Animal {
         super(name, age); //invoke the constructor of the parent class
         this.runSpeed = runSpeed;
     }
+    run() {
+        console.log(`This ${this.name} can run`);
+    }
 }
 class Fish extends Animal {
     constructor(name, age, swimSpeed) {
         super(name, age);
         this.swimSpeed = swimSpeed;
+    }
+    swim() {
+        console.log(`This ${this.name} can swim`);
     }
 }
 
