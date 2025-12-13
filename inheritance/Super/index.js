@@ -5,7 +5,7 @@ class Animal {
 
     }
     move(speed) {
-        console.log(`${this.name} moves at speed of ${this.speed}`);
+        console.log(`${this.name} moves at speed of ${speed}`);
     }
 }
 
@@ -15,7 +15,9 @@ class Rabbit extends Animal {
         this.runSpeed = runSpeed;
     }
     run() {
+
         console.log(`This ${this.name} can run`);
+        super.move(this.runSpeed);
     }
 }
 class Fish extends Animal {
@@ -25,13 +27,12 @@ class Fish extends Animal {
     }
     swim() {
         console.log(`This ${this.name} can swim`);
+        super.move(this.swimSpeed);
     }
 }
 
 const rabbit = new Rabbit("rabbit", 1, 25);
-const fish = new Fish("rabbit", 2, 12);
+const fish = new Fish("fish", 2, 12);
 
-console.log(rabbit.name);
-console.log(rabbit.age);
-console.log(rabbit.runSpeed);
-console.log(`and the fish swims ${fish.swimSpeed} km`);
+rabbit.run();
+fish.swim();
