@@ -20,9 +20,16 @@ class Rectangle {
             console.error("height must be positive");
         }
     }
+
+    get width() {
+        return this._width;
+    }
+    get height() {
+        return this._height;
+    }
 }
 
-const rectangle = new Rectangle(-100000, -100000);
+const rectangle = new Rectangle(100000, 100000);
 
 console.log(rectangle.width);
 console.log(rectangle.height);
