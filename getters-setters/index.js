@@ -5,19 +5,19 @@ class Rectangle {
     }
 
     set width(newWidth) {
-        if (newWidth > 0) {
+        if (newWidth > 0 && typeof newWidth === "number") {
             this._width = newWidth; //_assign to the private _width
         }
         else {
-            console.error("width must be positive");
+            console.error("width must be positive number");
         }
     }
     set height(newHeight) {
-        if (newHeight > 0) {
+        if (newHeight > 0 && typeof newHeight === "number") {
             this._height = newHeight;
         }
         else {
-            console.error("height must be positive");
+            console.error("height must be positive number");
         }
     }
 
@@ -33,7 +33,7 @@ class Rectangle {
 }
 
 const rectangle = new Rectangle(100000, 100000);
-rectangle.width = 5;
+rectangle.width = "maria";
 // rectangle.width = -5;  wont work 
 rectangle.height = 23;
 
