@@ -20,3 +20,8 @@ class Fish extends Animal {
 
 const rabbit = new Rabbit("rabbit", 1, 25);
 const fish = new Fish("rabbit", 2, 12);
+
+console.log(rabbit.name);
+console.log(rabbit.age);
+console.log(rabbit.runSpeed);
+console.log(`and the fish swims ${fish.swimSpeed} km`);
