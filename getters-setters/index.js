@@ -22,14 +22,21 @@ class Rectangle {
     }
 
     get width() {
-        return this._width;
+        return this._width.toFixed(1);
     }
     get height() {
-        return this._height;
+        return this._height.toFixed(1);
+    }
+    get area() {
+        return (this._width * this._height).toFixed(1);
     }
 }
 
 const rectangle = new Rectangle(100000, 100000);
+rectangle.width = 5;
+// rectangle.width = -5;  wont work 
+rectangle.height = 23;
 
 console.log(rectangle.width);
 console.log(rectangle.height);
+console.log(rectangle.area);
