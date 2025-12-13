@@ -1,20 +1,19 @@
 class Animal {
-    constructor() {
-
+    constructor(name, age,) {
+        this.name = name;
+        this.age = age;
     }
 }
 
 class Rabbit extends Animal {
     constructor(name, age, runSpeed) {
-        this.name = name;
-        this.age = age;
+        super(name, age); //invoke the constructor of the parent class
         this.runSpeed = runSpeed;
     }
 }
 class Fish extends Animal {
     constructor(name, age, swimSpeed) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
         this.swimSpeed = swimSpeed;
     }
 }
