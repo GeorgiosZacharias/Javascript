@@ -22,7 +22,9 @@ console.log(firstColor, secondColor, thirdColor);
 console.log(extraColors);
 
 //extract values from objects
-
+function displayPerson({ firstName, lastName, age, job = "Unemployed" }) {
+    console.log(`name= ${firstName} ${lastName}, age= ${age}, job= ${job}`)
+}
 const person1 = {
     firstName: "takis tsan",
     lastName: "sing",
@@ -37,4 +39,7 @@ const person2 = {
 }
 
 const { firstName, lastName, age, job = "Unemployed" } = person1; // ="Unemployed" default
-console.log(firstName, lastName, age, job)
+displayPerson(person1);
+displayPerson(person2);
+
+//destructure in functions parameters
