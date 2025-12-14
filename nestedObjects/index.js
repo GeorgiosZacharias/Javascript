@@ -18,3 +18,7 @@ console.log(person.isStudent);
 console.log(person.hobbies[1]);
 console.log(person.address);
 console.log(person.address.street);
+
+for (const property in person.address) {
+    console.log(person.address[property]);
+}
