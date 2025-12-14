@@ -17,6 +17,10 @@ fruits.forEach(fruit => console.log(fruit.color));
 const fruitNames = fruits.map(fruit => fruit.name);
 console.log(fruitNames);
 
+//filter()
+const yellowFruits = fruits.filter(fruit => fruit.color === "yellow");
+console.log(yellowFruits);
+
 
 setTimeout(() => {
     fruits.splice(1, 2); // will remove objects in certain indexes
