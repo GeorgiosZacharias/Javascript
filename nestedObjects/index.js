@@ -1,24 +1,21 @@
 //nested object = object inside of other objects,child object is enclosed by a parent object
 
-const person = {
-    fullName: "takis tsan",
-    age: 30,
-    isStudent: false,
-    hobbies: ["football", "fishing", "cooking"],
-    address: {  //nested object
-        street: "123 moschato",
-        city: "athens",
-        country: "greece"
+class Person {
+    constructor(name, age, ...address) {
+        this.name = name;
+        this.age = age;
+        this.address = new Address(...address);
+    }
+}
+class Address {
+    constructor(street, city, country) {
+        this.street = street;
+        this.city = city;
+        this.country = country;
     }
 }
 
-console.log(person.fullName);
-console.log(person.age);
-console.log(person.isStudent);
-console.log(person.hobbies[1]);
-console.log(person.address);
-console.log(person.address.street);
-
-for (const property in person.address) {
-    console.log(person.address[property]);
-}
+const person1 = new Person("takis tsan", 30, "123 justin street", "athens", "greece");
+const person2 = new Person("tasa piper ", 20, "345 justins street", "athens", "greece");
+console.log(person1.address.street);
+console.log(person2.address.city);
