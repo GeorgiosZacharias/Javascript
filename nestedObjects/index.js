@@ -11,3 +11,10 @@ const person = {
         country: "greece"
     }
 }
+
+console.log(person.fullName);
+console.log(person.age);
+console.log(person.isStudent);
+console.log(person.hobbies[1]);
+console.log(person.address);
+console.log(person.address.street);
