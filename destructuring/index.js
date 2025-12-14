@@ -11,7 +11,12 @@ console.log(b);
 
 //swap 2 elements in an array
 
-const colors = ["red", "green", "blue", "black"];
+const colors = ["red", "green", "blue", "black", "white"];
 
 [colors[0], colors[3]] = [colors[3], colors[0]];
 console.log(colors);
+
+//assign array elements to variables
+const [firstColor, secondColor, thirdColor, ...extraColors] = colors; // ...rest parameters
+console.log(firstColor, secondColor, thirdColor);
+console.log(extraColors);
