@@ -20,3 +20,21 @@ console.log(colors);
 const [firstColor, secondColor, thirdColor, ...extraColors] = colors; // ...rest parameters
 console.log(firstColor, secondColor, thirdColor);
 console.log(extraColors);
+
+//extract values from objects
+
+const person1 = {
+    firstName: "takis tsan",
+    lastName: "sing",
+    age: 30,
+    job: "singer"
+}
+
+const person2 = {
+    firstName: " tsan",
+    lastName: "singer",
+    age: 20,
+}
+
+const { firstName, lastName, age, job = "Unemployed" } = person1; // ="Unemployed" default
+console.log(firstName, lastName, age, job)
