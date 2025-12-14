@@ -9,6 +9,6 @@ console.log(fruits[2].name);
 fruits.push({ name: "grapes", color: "purple", calories: 45 });
 console.log(fruits);
 setTimeout(() => {
-    fruits.pop();
+    fruits.splice(1, 2); // will remove objects in certain indexes
     console.log(fruits);
 }, 3000);
