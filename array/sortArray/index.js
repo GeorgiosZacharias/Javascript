@@ -16,3 +16,7 @@ const people = [{ name: "john", age: 14, gpa: 3.4 }, { name: "ben", age: 14, gpa
 
 people.sort((a, b) => a.age - b.age);
 console.log(people);
+
+//if we need to sort by a property that contains a string within an object
+people.sort((a, b) => a.name.localeCompare(b.name));
+console.log(people);
