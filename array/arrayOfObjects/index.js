@@ -7,8 +7,20 @@ console.log(fruits[0].calories);
 console.log(fruits[2].name);
 
 fruits.push({ name: "grapes", color: "purple", calories: 45 });
-console.log(fruits);
+
+
+// for each()
+fruits.forEach(fruit => console.log(fruit.color));
+
+
+// map()
+const fruitNames = fruits.map(fruit => fruit.name);
+console.log(fruitNames);
+
+
 setTimeout(() => {
     fruits.splice(1, 2); // will remove objects in certain indexes
     console.log(fruits);
 }, 3000);
+
+
