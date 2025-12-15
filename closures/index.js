@@ -5,11 +5,25 @@
 //used frequently in js farmerworks :react,vue,angular
 
 function outer() {
-    let message = "Hello";
-    functioninner(){
+    let message = "Hello"; //becomes variable;
+    function inner() {
         console.log(message);
     }
-    innerHeight();
+    inner();
 }
 
 outer();
+
+function createCounter() {
+    let count = 0; //maintain the value 
+    function increment() {
+        count++;
+        console.log(`count increased to ${count}`);
+    }
+    return { increment }; //returns an object
+
+}
+
+const counter = createCounter(); //to hold the  state of the counter 
+counter.increment();
+counter.increment();
