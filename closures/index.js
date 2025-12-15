@@ -20,10 +20,16 @@ function createCounter() {
         count++;
         console.log(`count increased to ${count}`);
     }
-    return { increment }; //returns an object
+    function getCount() {
+        return count; //to get the count
+    }
+    return { increment, getCount }; //returns an object
+
+
 
 }
 
 const counter = createCounter(); //to hold the  state of the counter 
 counter.increment();
 counter.increment();
+console.log(`the current count is ${counter.getCount()}`);
