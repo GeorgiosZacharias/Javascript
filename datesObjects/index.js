@@ -11,6 +11,7 @@ const minutes = date.getMinutes();
 const seconds = date.getSeconds();
 const dayOfWeek = date.getDay();
 
+
 console.log(date);
 
 console.log(date1);
@@ -21,3 +22,12 @@ console.log(hour);
 console.log(minutes);
 console.log(seconds);
 console.log(dayOfWeek);
+
+date.setFullYear(2024);
+date.setMonth(0);
+date.setDate(1);
+date.setHours(2);
+date.setMinutes(3);
+date.setSeconds(30);
+
+console.log(date);
