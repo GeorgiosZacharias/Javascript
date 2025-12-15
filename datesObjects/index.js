@@ -31,3 +31,12 @@ date.setMinutes(3);
 date.setSeconds(30);
 
 console.log(date);
+
+
+
+const dateCompare1 = new Date("2023-12-31");
+const dateCompare2 = new Date("2024-01-01");
+
+if (dateCompare2 > dateCompare1) {
+    console.log("Happy New Year");
+}
