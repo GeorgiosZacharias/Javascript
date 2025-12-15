@@ -33,3 +33,26 @@ const counter = createCounter(); //to hold the  state of the counter
 counter.increment();
 counter.increment();
 console.log(`the current count is ${counter.getCount()}`);
+
+
+
+let score = 0;
+
+function increaseScore(points) {
+    score += points;
+    console.log(`+${points} pts`)
+}
+function decreaseScore(points) {
+    score -= points;
+    console.log(`-${points} pts`)
+}
+function getScore() {
+    return score;
+}
+
+increaseScore(15);
+console.log(`the final score is ${getScore()} pts`);
+decreaseScore(8);
+console.log(`the final score is ${getScore()} pts`);
+score = 100;
+console.log(`the final score is ${getScore()} pts`);
