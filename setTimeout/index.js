@@ -19,7 +19,13 @@
 
 //clearTimeout(timeoutId);
 
+let timeoutId;
 
 function startTimer() {
-    setTimeout(() => window.alert("Hello"), 3000);
+    timeoutId = setTimeout(() => window.alert("Hello"), 3000);
+    console.log("started");
+}
+function clearTimer() {
+    clearTimeout(timeoutId);
+    console.log("cleared");
 }
