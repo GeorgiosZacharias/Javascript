@@ -35,24 +35,26 @@ counter.increment();
 console.log(`the current count is ${counter.getCount()}`);
 
 
+function createGame() {
+    let score = 0;
 
-let score = 0;
+    function increaseScore(points) {
+        score += points;
+        console.log(`+${points} pts`)
+    }
+    function decreaseScore(points) {
+        score -= points;
+        console.log(`-${points} pts`)
+    }
+    function getScore() {
+        return score;
+    }
+    return { increaseScore, decreaseScore, getScore }; // to be able to access
+}
 
-function increaseScore(points) {
-    score += points;
-    console.log(`+${points} pts`)
-}
-function decreaseScore(points) {
-    score -= points;
-    console.log(`-${points} pts`)
-}
-function getScore() {
-    return score;
-}
+const game = createGame();
+game.increaseScore(15);
+console.log(`the final score is ${game.getScore()} pts`);
+game.decreaseScore(8);
+console.log(`the final score is ${game.getScore()} pts`);
 
-increaseScore(15);
-console.log(`the final score is ${getScore()} pts`);
-decreaseScore(8);
-console.log(`the final score is ${getScore()} pts`);
-score = 100;
-console.log(`the final score is ${getScore()} pts`);
