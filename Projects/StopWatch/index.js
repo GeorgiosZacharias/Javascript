@@ -13,7 +13,11 @@ function start() {
     }
 }
 function stop() {
-
+    if (isRunning) {
+        clearInterval(timer);
+        elapsedTime = Date.now() - startTime;
+        isRunning = false;
+    }
 }
 function reset() {
 
