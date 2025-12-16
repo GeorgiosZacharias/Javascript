@@ -22,5 +22,8 @@ function reset() {
 function update() {
     const currentTime = Date.now();
     elapsedTime = currentTime - startTime;
-
+    let hours = Math.floor(elapsedTime / (1000 * 60 * 60)); // covnerts miliseconds to hours mm/seconds/minutes
+    let minutes = Math.floor(elapsedTime / (1000 * 60) % 60);
+    let seconds = Math.floor(elapsedTime / 1000 % 60);
+    let miliSeconds = Math.floor(elapsedTime % 1000 / 10); // /10 because we want 2 digits
 }
