@@ -26,4 +26,9 @@ function update() {
     let minutes = Math.floor(elapsedTime / (1000 * 60) % 60);
     let seconds = Math.floor(elapsedTime / 1000 % 60);
     let miliSeconds = Math.floor(elapsedTime % 1000 / 10); // /10 because we want 2 digits
+    hours = String(hours).padStart(2, "0");
+    minutes = String(minutes).padStart(2, "0");
+    seconds = String(seconds).padStart(2, "0");
+    miliSeconds = String(miliSeconds).padStart(2, "0");
+    display.textContent = `${hours}:${minutes}:${seconds}:${miliSeconds}`;
 }
