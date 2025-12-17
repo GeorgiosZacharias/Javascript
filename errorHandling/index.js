@@ -1,10 +1,18 @@
+
+
 try {
-    console.log(x);
+    const dividend = window.prompt("Enter a dividend");
+    const divisor = window.prompt("Enter a divisor");
+    const result = dividend / divisor;
+    if (divisor == 0) {
+        throw new Error("Can not devide by 0");
+    }
+    console.log(result);
 } catch (error) {
     console.error(error);
 }
 finally {
-    //used for closing files,close connections,release resources
+
     console.log("this always executes");
 }
 
