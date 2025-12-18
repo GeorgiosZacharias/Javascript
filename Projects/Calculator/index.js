@@ -7,5 +7,11 @@ function clearDisplay() {
     display.value = "0";
 }
 function calculate() {
-    display.value = eval(display.value); //eval evaluates the values inside the display/like build in calculator
+    try {
+        display.value = eval(display.value); //eval evaluates the values inside the display/like build in calculator
+    }
+    catch (error) {
+        display.value = "Error"
+    }
+
 }
