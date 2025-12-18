@@ -4,8 +4,8 @@ function appendToDisplay(input) {
     display.value += input;
 }
 function clearDisplay() {
-    display.value = "";
+    display.value = "0";
 }
 function calculate() {
-
+    display.value = eval(display.value); //eval evaluates the values inside the display/like build in calculator
 }
