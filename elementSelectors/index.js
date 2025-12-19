@@ -10,5 +10,8 @@ myHeading.style.backgroundColor = "yellow";
 myHeading.style.textAlign = "center";
 
 const fruits = document.getElementsByClassName("fruits");
-fruits[0].style.backgroundColor = "yellow";
+fruits[0].style.backgroundColor = "black";
 fruits[0].style.textAlign = "center";
+for (let fruit of fruits) {
+    fruit.style.backgroundColor = "yellow";
+}
