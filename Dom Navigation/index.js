@@ -6,3 +6,16 @@
 // .previousElementSibling
 // .parentElement
 // .children
+
+const element = document.getElementById("fruits");
+const firstChild = element.firstElementChild;
+firstChild.style.backgroundColor = "yellow";
+
+
+const ulElements = document.querySelectorAll("ul");
+
+ulElements.forEach((ul, index) => {
+    if (index !== 0) { // skip the first UL
+        ul.firstElementChild.style.backgroundColor = "red";
+    }
+});
