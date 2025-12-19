@@ -16,6 +16,11 @@ for (let fruit of fruits) {
     fruit.style.backgroundColor = "yellow";
 }
 
-Array.from(fruits).forEach(fruit => {
+Array.from(fruits).forEach(fruit => {//returns a new array of fruits
     fruit.style.backgroundColor = "yellow"
-}); //returns a new array of fruits
+});
+
+
+const h4Elements = document.getElementsByTagName("h4");
+
+console.log(h4Elements);
