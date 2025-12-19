@@ -7,10 +7,7 @@
 // .parentElement
 // .children
 
-const element1 = document.getElementById("fruits");
-const firstChild = element1.firstElementChild;
-firstChild.style.backgroundColor = "yellow";
-
+const element = document.getElementById("fruits");
 
 const ulElements = document.querySelectorAll("ul");
 
@@ -24,3 +21,7 @@ ulElements.forEach((ul) => {
     const lastChild = ul.lastElementChild;
     lastChild.style.backgroundColor = "green";
 });
+
+const element1 = document.getElementById("apple");
+const nextSibling = element1.nextElementSibling;
+nextSibling.style.backgroundColor = "blue";
