@@ -2,7 +2,8 @@
 // 2. document.getElementsClassName(); // returns html collection (like array)
 // 3. document.getElementsByTagName(); //html collection
 // 4. document.querySelector(); //element or Null
-// 5. document.querySelectorAll(); //NODELIST
+// 5. document.querySelectorAll(); //NODELIST same as a html collection but has build in methods
+//they are static they do not automatically update in the dom
 
 
 const myHeading = document.getElementById("my-header");
@@ -46,3 +47,17 @@ Array.from(h4Elements).forEach(h4Element => {//returns a new array of fruits
 Array.from(liElements).forEach(liElement => {//returns a new array of fruits
     liElement.style.backgroundColor = "lightgreen"
 });
+
+const element = document.querySelector(".fruits") //returns the first he finds
+element.style.backgroundColor = "black";
+
+
+const fruits2 = document.querySelectorAll(".fruits");
+fruits2[0].style.backgroundColor = "red";
+
+const foods = document.querySelectorAll("li");
+foods[5].style.backgroundColor = "red";
+
+foods.forEach(food => {
+    food.style.backgroundColor = "red";
+})
