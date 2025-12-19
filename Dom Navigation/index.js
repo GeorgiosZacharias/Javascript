@@ -36,3 +36,12 @@ const element3 = document.getElementById("pie");
 const parent = element3.parentElement;
 parent.style.backgroundColor = "orange";
 parent.style.border = "2px solid black";
+
+//child element
+const element4 = document.getElementById("Vegetables");
+const children = element4.children; //returns html collection not node
+
+Array.from(children).forEach(child => {
+    child.style.backgroundColor = "lightgreen";
+})
+children[1].style.backgroundColor = "yellow";
