@@ -23,7 +23,26 @@ Array.from(fruits).forEach(fruit => {//returns a new array of fruits
 
 const h4Elements = document.getElementsByTagName("h4");
 
+const liElements = document.getElementsByTagName("li");
+
 console.log(h4Elements);
 
 h4Elements[0].style.backgroundColor = "yellow";
 h4Elements[1].style.backgroundColor = "black";
+
+
+for (let h4Element of h4Elements) {
+    h4Element.style.backgroundColor = "yellow";
+}
+
+for (let liElement of liElements) {
+    liElement.style.backgroundColor = "lightgreen";
+}
+
+Array.from(h4Elements).forEach(h4Element => {//returns a new array of fruits
+    h4Element.style.backgroundColor = "yellow"
+});
+
+Array.from(liElements).forEach(liElement => {//returns a new array of fruits
+    liElement.style.backgroundColor = "lightgreen"
+});
