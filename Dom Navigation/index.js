@@ -7,8 +7,8 @@
 // .parentElement
 // .children
 
-const element = document.getElementById("fruits");
-const firstChild = element.firstElementChild;
+const element1 = document.getElementById("fruits");
+const firstChild = element1.firstElementChild;
 firstChild.style.backgroundColor = "yellow";
 
 
@@ -18,4 +18,9 @@ ulElements.forEach((ul, index) => {
     if (index !== 0) { // skip the first UL
         ul.firstElementChild.style.backgroundColor = "red";
     }
+});
+
+ulElements.forEach((ul) => {
+    const lastChild = ul.lastElementChild;
+    lastChild.style.backgroundColor = "green";
 });
