@@ -15,3 +15,7 @@ fruits[0].style.textAlign = "center";
 for (let fruit of fruits) {
     fruit.style.backgroundColor = "yellow";
 }
+
+Array.from(fruits).forEach(fruit => {
+    fruit.style.backgroundColor = "yellow"
+}); //returns a new array of fruits
