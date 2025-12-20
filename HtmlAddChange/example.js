@@ -11,3 +11,7 @@ newListItem.style.backgroundColor = "lightgreen";
 
 //document.body.prepend(newListItem);
 document.getElementById("fruits").append(newListItem);
+
+//add between elements
+const orange = document.getElementById("orange");
+document.getElementById("fruits").insertBefore(newListItem, orange);
