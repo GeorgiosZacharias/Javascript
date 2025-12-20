@@ -9,4 +9,9 @@ newH1.style.textAlign = "center";
 //step 3 append element to dom
 //document.body.append(newH1);
 //document.body.prepend(newH1);
-document.getElementById("box1").append(newH1);
+document.getElementById("box1").append(newH1); //becomes a child
+
+
+const box2 = document.getElementById("box2");
+//insertBefore(newElement,currentElemnt)
+document.body.insertBefore(newH1, box2);
