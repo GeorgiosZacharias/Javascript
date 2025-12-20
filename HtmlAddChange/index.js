@@ -4,6 +4,9 @@ const newH1 = document.createElement("h1");
 //Step 2 add attributes/properties
 newH1.textContent = "i like pizza!";
 newH1.id = "myH1";
+newH1.style.color = "red";
+newH1.style.textAlign = "center";
 //step 3 append element to dom
 //document.body.append(newH1);
-document.body.prepend(newH1);
+//document.body.prepend(newH1);
+document.getElementById("box1").append(newH1);
