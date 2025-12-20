@@ -1,0 +1,9 @@
+//example 1 <H1>
+//step 1 create the element
+const newH1 = document.createElement("h1");
+//Step 2 add attributes/properties
+newH1.textContent = "i like pizza!";
+newH1.id = "myH1";
+//step 3 append element to dom
+//document.body.append(newH1);
+document.body.prepend(newH1);
