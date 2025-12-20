@@ -15,3 +15,13 @@ document.getElementById("box1").append(newH1); //becomes a child
 const box2 = document.getElementById("box2");
 //insertBefore(newElement,currentElemnt)
 document.body.insertBefore(newH1, box2);
+
+
+//if they didnt have ids
+const newH2 = document.createElement("h2");
+newH2.textContent = "i like burger!";
+newH2.id = "myH2";
+newH2.style.color = "red";
+newH2.style.textAlign = "center"
+const boxes = document.querySelectorAll(".box");
+document.body.insertBefore(newH2, boxes[3]);
