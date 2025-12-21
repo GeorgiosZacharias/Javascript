@@ -1,22 +1,26 @@
 // event listener = click,mouseover,mouseout,addEvenListener
 
 const myBox = document.getElementById("myBox");
+const myButton = document.getElementById("myButton");
 
 //myBox.addEventListener(event,callback);
 //arrow function
-myBox.addEventListener("click", event => {
-    event.target.style.backgroundColor = "red";
-    event.target.textContent = "ouch  😒";
+myButton.addEventListener("click", event => {
+    /*   event.target.style.backgroundColor = "red";
+      event.target.textContent = "ouch  😒"; */
+    myBox.style.backgroundColor = "red";
+    myBox.textContent = "ouch  😒";
+
 });
 //can have multiple eventlistener
-myBox.addEventListener("mouseover", event => {
-    event.target.style.backgroundColor = "yellow";
-    event.target.textContent = "plz dont 😢";
+myButton.addEventListener("mouseover", event => {
+    myBox.style.backgroundColor = "yellow";
+    myBox.textContent = "plz dont 😢";
 })
 
-myBox.addEventListener("mouseout", event => {
-    event.target.style.backgroundColor = "lightgreen";
-    event.target.textContent = "click me 😊";
+myButton.addEventListener("mouseout", event => {
+    myBox.style.backgroundColor = "lightgreen";
+    myBox.textContent = "click me 😊";
 })
 
 
