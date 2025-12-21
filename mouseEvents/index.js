@@ -3,8 +3,15 @@
 const myBox = document.getElementById("myBox");
 
 //myBox.addEventListener(event,callback);
-myBox.addEventListener("click", changeColor);
-//target what we clicked on
-function changeColor(event) {
+//arrow function
+myBox.addEventListener("click", event => {
     event.target.style.backgroundColor = "red";
-}
+    event.target.textContent = "ouch  😒";
+});
+
+
+//target what we clicked on
+/* function changeColor(event) {
+    event.target.style.backgroundColor = "red";
+    event.target.textContent = "ouch  😒";
+} */
