@@ -8,6 +8,16 @@ myBox.addEventListener("click", event => {
     event.target.style.backgroundColor = "red";
     event.target.textContent = "ouch  😒";
 });
+//can have multiple eventlistener
+myBox.addEventListener("mouseover", event => {
+    event.target.style.backgroundColor = "yellow";
+    event.target.textContent = "plz dont 😢";
+})
+
+myBox.addEventListener("mouseout", event => {
+    event.target.style.backgroundColor = "lightgreen";
+    event.target.textContent = "click me 😊";
+})
 
 
 //target what we clicked on
