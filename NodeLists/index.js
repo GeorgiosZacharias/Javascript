@@ -6,3 +6,10 @@
 let buttons = document.querySelectorAll(".myButtons");
 
 console.log(buttons);
+
+// Add html/css properties
+
+buttons.forEach(button => {
+    button.style.backgroundColor = "green";
+    button.textContent += "😁";
+});
