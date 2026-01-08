@@ -47,3 +47,15 @@ console.log(buttons); //static collection wont update so it wotn show button 5
 
 buttons = document.querySelectorAll(".myButtons"); // get fresh NodeList
 console.log(buttons); // now includes the new button
+
+
+//remove an element
+
+buttons.forEach(button => {
+    button.addEventListener("click", event => {
+        event.target.remove();
+        console.log(buttons); //they still excist 
+        buttons = document.querySelectorAll(".myButtons");
+        console.log(buttons);
+    })
+})
