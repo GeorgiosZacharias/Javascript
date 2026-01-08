@@ -33,3 +33,17 @@ buttons.forEach(button => {
         event.target.style.backgroundColor = "hsl(205,100%,50%";
     }) //event,callback
 })
+
+//add element
+
+const newButton = document.createElement("button");
+newButton.textContent = "Button 5";
+newButton.classList = "myButtons";
+
+document.body.appendChild(newButton);
+
+console.log(buttons); //static collection wont update so it wotn show button 5
+
+
+buttons = document.querySelectorAll(".myButtons"); // get fresh NodeList
+console.log(buttons); // now includes the new button
