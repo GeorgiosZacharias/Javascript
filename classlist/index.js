@@ -3,3 +3,6 @@
 //           allows you to make reuseable classes for many elements
 //           across your webpage.
 
+const myButton = document.getElementById("myButton");
+
+myButton.classList.add("enabled");
