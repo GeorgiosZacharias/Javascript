@@ -6,6 +6,14 @@
     padding: 10px 15px;
 }
 
+.myButtons {
+    font-size: 4rem;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
 .enabled {
     background-color: red;
 }
