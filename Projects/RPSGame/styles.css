@@ -39,3 +39,11 @@ body {
     font-size: 5.5rem;
     margin: 30px 0;
 }
+
+.greenText {
+    color: hsl(120, 100%, 42%)
+}
+
+.redText {
+    color: hsl(0, 100%, 42%)
+}
