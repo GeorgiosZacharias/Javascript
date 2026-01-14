@@ -40,4 +40,6 @@ function takeOutTrash() {
 //})
 
 // method chaining
-walkDog().then(value => console.log(value)); //value will be You walk the dog
+walkDog().then(value => { console.log(value); return cleanKitchen() }) //value will be You walk the dog
+    .then(value => { console.log(value); return takeOutTrash() })
+    .then(value => { console.log(value); console.log("you finished all the chores") }); 
