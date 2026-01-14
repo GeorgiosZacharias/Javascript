@@ -9,7 +9,13 @@ function walkDog() {
 
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve("You walk the dog");
+            const dogWalked = false;
+            if (dogWalked) {
+                resolve("You walk the dog");
+            } else {
+                reject("you didnt walk the dog");
+            }
+
 
         }, 1500);
     });  //how to get out of callback hell
@@ -42,4 +48,5 @@ function takeOutTrash() {
 // method chaining
 walkDog().then(value => { console.log(value); return cleanKitchen() }) //value will be You walk the dog
     .then(value => { console.log(value); return takeOutTrash() })
-    .then(value => { console.log(value); console.log("you finished all the chores") }); 
+    .then(value => { console.log(value); console.log("you finished all the chores") })
+    .catch(error => console.error(error)); //it will stop when reject found
