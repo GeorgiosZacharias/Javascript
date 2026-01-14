@@ -38,3 +38,6 @@ function takeOutTrash() {
 //        takeOutTrash(() => console.log("you finished all the chores!"));
 //    })
 //})
+
+// method chaining
+walkDog().then(value => console.log(value)); //value will be You walk the dog
