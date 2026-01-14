@@ -4,29 +4,37 @@
 // new Promise((resolve,reject)) => {asynchronous code}
 
 
-function walkDog(callback) {
-    setTimeout(() => {
-        console.log("You walk the dog");
-        callback();
-    }, 1500);
+function walkDog() {
+
+
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("You walk the dog");
+
+        }, 1500);
+    });  //how to get out of callback hell
 }
 
-function cleanKitchen(callback) {
-    setTimeout(() => {
-        console.log("You clean the kitchen");
-        callback();
-    }, 2500);
+function cleanKitchen() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("You clean the kitchen");
+
+        }, 2500);
+    });  //how to get out of callback hell
 }
 
-function takeOutTrash(callback) {
-    setTimeout(() => {
-        console.log("You take out the trash");
-        callback();
-    }, 500);
+function takeOutTrash() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("You take out the  trash");
+
+        }, 500);
+    });  //how to get out of callback hell
 }
 
-walkDog(() => {
-    cleanKitchen(() => {
-        takeOutTrash(() => console.log("you finished all the chores!"));
-    })
-})
+//walkDog(() => {
+//    cleanKitchen(() => {
+//        takeOutTrash(() => console.log("you finished all the chores!"));
+//    })
+//})
