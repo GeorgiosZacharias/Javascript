@@ -10,7 +10,7 @@ function walkDog() {
 
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            const dogWalked = false;
+            const dogWalked = true;
             if (dogWalked) {
                 resolve("You walk the dog");
             } else {
@@ -41,7 +41,15 @@ function takeOutTrash() {
 }
 
 
-walkDog().then(value => { console.log(value); return cleanKitchen() }) //value will be You walk the dog
-    .then(value => { console.log(value); return takeOutTrash() })
-    .then(value => { console.log(value); console.log("you finished all the chores") })
-    .catch(error => console.error(error)); //it will stop when reject found
+async function doChores() {
+    const walkDogResult = await walkDog();
+    console.log(walkDogResult);
+
+    const cleanKitchenResult = await cleanKitchen();
+    console.log(cleanKitchenResult);
+
+    const takeOutTrashResult = await takeOutTrash();
+    console.log(takeOutTrashResult);
+}
+
+doChores();
