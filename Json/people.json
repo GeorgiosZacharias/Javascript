@@ -1,0 +1,20 @@
+[
+    {
+        "name": "George",
+        "age": 26,
+        "isEmployed": true,
+        "hobbies": [
+            "programming",
+            "gaming"
+        ]
+    },
+    {
+        "name": "Patrick",
+        "age": 27,
+        "isEmployed": false,
+        "hobbies": [
+            "dancing",
+            "gaming"
+        ]
+    }
+]
