@@ -1,42 +1,26 @@
-const names = ["george", "patrick"];
+//JSON.stringify() = converts a js object to a json string
+//JSON.parse() = converts a json string to a js object
 
-const jsonString = JSON.stringify(names);
+const jsonNames = `["george", "patrick"]`;
+const JsonPerson = `{
+    "name": "George", "age": 26, "isEmployed": true, "hobbies": ["programming", "gaming"]
+}`;
+const JsonPeople = `[{
+    "name": "George", "age": 26, "isEmployed": true, "hobbies": ["programming", "gaming"]
+},
+{
+    "name": "Patrick", "age": 27,
+    "isEmployed": false, "hobbies": ["dancing", "gaming"]
+}]`;
 
-const person = {
-    "name": "George",
-    "age": 26,
-    "isEmployed": true,
-    "hobbies": [
-        "programming",
-        "gaming"
-    ]
-};
+const parsedData = JSON.parse(jsonNames);
+const parsedData1 = JSON.parse(JsonPerson);
+const parsedData2 = JSON.parse(JsonPeople);
+console.log(parsedData);
+console.log(parsedData1);
+console.log(parsedData2);
+console.log(jsonNames);
+console.log(JsonPerson);
+console.log(JsonPeople);
 
-const jsonStringPerson = JSON.stringify(person);
 
-const people = [
-    {
-        "name": "George",
-        "age": 26,
-        "isEmployed": true,
-        "hobbies": [
-            "programming",
-            "gaming"
-        ]
-    },
-    {
-        "name": "Patrick",
-        "age": 27,
-        "isEmployed": false,
-        "hobbies": [
-            "dancing",
-            "gaming"
-        ]
-    }
-];
-
-const jsonStringpeople = JSON.stringify(people);
-
-console.log(jsonString);
-console.log(jsonStringPerson);
-console.log(jsonStringpeople);
