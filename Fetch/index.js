@@ -26,7 +26,10 @@ async function fetchData(){
              throw new Error("could not fetch resource");
         }
         const data = await response.json();
-        console.log(data);
+        const pokemonSprite = data.sprites.front_default;
+        const imgElement =document.getElementById("pokemonSprite");
+        imgElement.src = pokemonSprite;
+        imgElement.style.display = "block";
     }
     catch(error){
         console.error("Error fetching data:", error);
