@@ -5,3 +5,6 @@
 // data asynchronously over the web
 // fetch(url, options) 
 
+fetch("https://pokeapi.co/api/v2/pokemon/pikachu")//resolve or reject
+.then(response => console.log("Response received:", response))
+.catch(error => console.error("Error fetching data:", error)); 
