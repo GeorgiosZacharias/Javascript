@@ -35,6 +35,15 @@ function displayWeatherInfo(Data){
         weather:[{ description, id }] }= Data;
     card.textContent = "";
     card.style.display = "flex";
+    const cityDisplay = document.createElement("h1");
+    const tempDisplay = document.createElement("p");
+    const humidityDisplay = document.createElement("p");
+    const descriptionDisplay = document.createElement("p");
+    const weatherIcon = document.createElement("p");
+
+    cityDisplay.textContent = `Weather in ${city}`;
+    cityDisplay.classList.add("cityDisplay");
+    card.appendChild(cityDisplay);
  }
 function displayErrorMessage(message){
     const errorDisplay = document.createElement("p");
