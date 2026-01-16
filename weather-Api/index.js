@@ -28,8 +28,13 @@ async function getWeatherData(cityName){
     return await response.json();
 }
 
-function displayWeatherInfo(weatherData){
-    console.log(weatherData);
+function displayWeatherInfo(Data){
+    //object destructuring
+     const { name:city,
+        main:{ temp, humidity},
+        weather:[{ description, id }] }= Data;
+    card.textContent = "";
+    card.style.display = "flex";
  }
 function displayErrorMessage(message){
     const errorDisplay = document.createElement("p");
