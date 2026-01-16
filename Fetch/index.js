@@ -6,5 +6,6 @@
 // fetch(url, options) 
 
 fetch("https://pokeapi.co/api/v2/pokemon/pikachu")//resolve or reject
-.then(response => console.log("Response received:", response))
+.then(response => response.json())
+.then(data => console.log(data)) //can access single data by doing data.name etc
 .catch(error => console.error("Error fetching data:", error)); 
