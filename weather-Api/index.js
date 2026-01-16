@@ -24,10 +24,13 @@ async function getWeatherData(cityName){
     const response = await fetch (apiUrl);
     if(!response.ok){
         throw new Error("Could not fetch weather data for this city.");
-    }else{
-        console.log(response);
     }
+    return await response.json();
 }
+
+function displayWeatherInfo(weatherData){
+    console.log(weatherData);
+ }
 function displayErrorMessage(message){
     const errorDisplay = document.createElement("p");
     errorDisplay.textContent = message;
