@@ -17,10 +17,11 @@ fetch("https://pokeapi.co/api/v2/pokemon/pikachu")//resolve or reject
 .then(data => console.log(data)) //can access single data by doing data.name etc
 .catch(error => console.error("Error fetching data:", error));
 
-fetchData();
+
 async function fetchData(){
     try{
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+        const pokemonName= document.getElementById("pokemonName").value.toLowerCase();
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
         if(!response.ok){
              throw new Error("could not fetch resource");
         }
