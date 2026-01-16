@@ -33,7 +33,7 @@ function displayWeatherInfo(Data){
      const { name:city,
         main:{ temp, humidity},
         weather:[{ description, id }] }= Data;
-    card.textContent = "";
+    card.textContent = ""; //clear previous content
     card.style.display = "flex";
     const cityDisplay = document.createElement("h1");
     const tempDisplay = document.createElement("p");
@@ -63,6 +63,7 @@ function displayWeatherInfo(Data){
  }
 
  function getWeatherEmoji(id){
+    //Return an emoji based on OpenWeatherMap weather condition ID.
     switch(true){
         case id >= 200 && id <300:
             return "⛈️"; //thunderstorm
