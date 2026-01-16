@@ -39,12 +39,50 @@ function displayWeatherInfo(Data){
     const tempDisplay = document.createElement("p");
     const humidityDisplay = document.createElement("p");
     const descriptionDisplay = document.createElement("p");
-    const weatherIcon = document.createElement("p");
+    const weatherEmoji = document.createElement("p");
 
     cityDisplay.textContent = `Weather in ${city}`;
     cityDisplay.classList.add("cityDisplay");
     card.appendChild(cityDisplay);
+
+    tempDisplay.textContent = `Temperature: ${(temp - 273.15).toFixed(1)} °C`;
+    tempDisplay.classList.add("tempDisplay");
+    card.appendChild(tempDisplay);
+
+    humidityDisplay.textContent = `Humidity: ${humidity}%`;
+    humidityDisplay.classList.add("humidityDisplay");
+    card.appendChild(humidityDisplay);
+
+    descriptionDisplay.textContent = `Conditions: ${description}`;
+    descriptionDisplay.classList.add("descriptionDisplay");
+    card.appendChild(descriptionDisplay);
+
+    weatherEmoji.textContent = getWeatherEmoji(id);
+    weatherEmoji.classList.add("weatherEmoji");
+    card.appendChild(weatherEmoji);
  }
+
+ function getWeatherEmoji(id){
+    switch(true){
+        case id >= 200 && id <300:
+            return "⛈️"; //thunderstorm
+        case id >= 300 && id <500:
+            return "🌦️"; //drizzle
+        case id >= 500 && id <600:
+            return "🌧️"; //rain
+        case id >= 600 && id <700:
+            return "❄️"; //snow
+        case id >= 700 && id <800:
+            return "🌫️"; //atmosphere
+        case id === 800:
+            return "☀️"; //clear
+        case id > 800 && id <900:
+            return "☁️"; //clouds
+        default:
+            return "❓"; //unknown
+    }
+}
+
 function displayErrorMessage(message){
     const errorDisplay = document.createElement("p");
     errorDisplay.textContent = message;
