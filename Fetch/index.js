@@ -5,7 +5,14 @@
 // data asynchronously over the web
 // fetch(url, options) 
 
-fetch("https://pokeapi.co/api/v2/pokemon/pikachu")//resolve or reject
-.then(response => response.json())
+fetch("https://pokeapi.co/api/v2/pokemon/ssspikachu")//resolve or reject
+.then(response =>{
+    if(!response.ok){
+        throw new Error("could not fetch resource");
+    }
+    return response.json();
+} 
+    
+)
 .then(data => console.log(data)) //can access single data by doing data.name etc
 .catch(error => console.error("Error fetching data:", error)); 
